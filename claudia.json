@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "livestatus-v3-executor",
+    "name": "livestatus-v3",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "r7wsj7srnb",
+    "module": "src/app"
+  }
+}
