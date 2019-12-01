@@ -15,3 +15,17 @@ api.get('/liveStatus', function () {
 api.get('/readyStatus', function () {
   return 'hello ready status';
 });
+
+
+api.get('/sendEnvelope', function () {
+	
+	var Docusign = require('./controllers/Docusign');
+	
+	var finalResponse = Docusign.sendEnvelope()
+
+  return finalResponse;
+});
+
+api.get('/testUpdate', function () {
+  return 'hello ready status';
+});
