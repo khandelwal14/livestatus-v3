@@ -29,3 +29,13 @@ api.get('/sendEnvelope', function () {
 api.get('/testUpdate', function () {
   return 'hello ready status';
 });
+
+
+api.get('/sendEnv', function () {
+	
+	var Docusign = require('./controllers/Docusign');
+	
+	var finalResponse = Docusign.sendEnv()
+
+  return finalResponse;
+});
