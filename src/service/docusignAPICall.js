@@ -12,7 +12,7 @@ exports.sendEnv = function () {
 			url: "https://demo.docusign.net:443/restapi/v2/accounts/9492754/envelopes/93be49ab-afa0-4adf-933c-f752070d71ec",
 			headers: headers,
 	//		body: body,
-			json: true,
+	//		json: true,
 			method: 'GET'
 		}
 		
@@ -27,9 +27,9 @@ exports.sendEnv = function () {
 				return reject(errorResponse);
 			}
 			else if(response.statusCode === 200 || response.statusCode === 201){
-				Response = {
+				const Response = {
 					status : 200,
-					data: JSON.stringify(response)
+					data: JSON.stringify(body)
 				}
 					console.log("Docusign API SUCCESS response....", Response);
 				return resolve(Response);
