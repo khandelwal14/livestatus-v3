@@ -20,6 +20,9 @@ exports.sendEnv = function () {
 		
 		console.log("Docusign API options....", options);
 		request(options,function(err, response, body){
+			console.log("Docusign API ERR before ifElse....", err);
+			console.log("Docusign API response before ifElse....", response);
+			console.log("Docusign API body before ifElse....", body);
 			if(err){
 				console.log("Docusign API ERR....", err);
 				const errorResponse = {
