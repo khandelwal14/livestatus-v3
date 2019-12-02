@@ -36,20 +36,20 @@ exports.sendEnv = function () {
 				console.log("Docusign API actual Response....", response);
 				const Response = {
 					status : 200,
-					data: JSON.stringify(body)
+					data: body
 				}
-					console.log("Docusign API SUCCESS response....", Response);
-				return resolve(Response);
+					console.log("Docusign API SUCCESS response....", body);
+				return resolve(body);
 				
 			}
 			else {
 				console.log("Docusign API actual ERROR Response....", response);
 				const errorResponse1 = {
 					status : 200,
-					data: JSON.stringify(response)
+					data: body
 				}
-				console.log("Docusign API response....", errorResponse1);
-				return resolve(errorResponse1);
+				console.log("Docusign API response....", body);
+				return resolve(body);
 			}
 		})
 		
