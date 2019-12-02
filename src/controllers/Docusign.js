@@ -17,5 +17,4 @@ module.exports.sendEnv = function sendEnv (req, res, next) {
 	  var serviceRes = DocusignEnv.sendEnv();
 	  console.log("returning sendEnv response - controller file", serviceRes);
 	  return serviceRes;
-	  })
 };
