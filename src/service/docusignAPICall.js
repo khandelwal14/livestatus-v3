@@ -5,7 +5,7 @@ exports.sendEnv = function () {
 	console.log("Inside docusign sendEnv function");
 	
 	const headers = {
-		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTU3NTIzMjE5OCwiZXhwIjoxNTc1MjYwOTk4LCJVc2VySWQiOiJmOTE3YWEwMi1hY2VjLTQwZWQtYmE1Ny0wZGNmZjhkNDFmZTIiLCJzaXRlaWQiOjEsInNjcCI6WyJzaWduYXR1cmUiLCJjbGljay5tYW5hZ2UiLCJvcmdhbml6YXRpb25fcmVhZCIsImdyb3VwX3JlYWQiLCJwZXJtaXNzaW9uX3JlYWQiLCJ1c2VyX3JlYWQiLCJ1c2VyX3dyaXRlIiwiYWNjb3VudF9yZWFkIiwiZG9tYWluX3JlYWQiLCJpZGVudGl0eV9wcm92aWRlcl9yZWFkIiwiZHRyLnJvb21zLnJlYWQiLCJkdHIucm9vbXMud3JpdGUiLCJkdHIuZG9jdW1lbnRzLnJlYWQiLCJkdHIuZG9jdW1lbnRzLndyaXRlIiwiZHRyLnByb2ZpbGUucmVhZCIsImR0ci5wcm9maWxlLndyaXRlIiwiZHRyLmNvbXBhbnkucmVhZCIsImR0ci5jb21wYW55LndyaXRlIl0sImF1ZCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImF6cCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImlzcyI6Imh0dHBzOi8vYWNjb3VudC1kLmRvY3VzaWduLmNvbS8iLCJzdWIiOiJmOTE3YWEwMi1hY2VjLTQwZWQtYmE1Ny0wZGNmZjhkNDFmZTIiLCJhbXIiOlsiaW50ZXJhY3RpdmUiXSwiYXV0aF90aW1lIjoxNTc1MjMyMTk2LCJwd2lkIjoiNjJiM2QxNDgtOTM2My00MWQyLWI0MWUtOGQ5NjVmMjMzYmJiIn0.kGxzu-26dqJNKiILD3VXZVSVSdCy9404NGEMcutfUkGlF-ihaGBR5jUpAwqFLUq1nktYAdx4H_eg0bQKZmX0mapXUdFfc8gmx2aVB3ztHhYHrAeONOQ0C_T52NJpRd7JE7ZmY8X7gYyEJfh7T528Ol34qz2e3Zaxl72ex2nnBDdn6hMKbWR3hF4w1MU_wbmBLA2_-L4t1DD0JnWZNYdgoL2YNCU-myeLflWlxEDsH9oHCGiQ_A-BY_hsm3QZVm2wy89u5bKpNH0KANBsd800bvdBSV8TYG3bIN5HebQzzGtO_1qw_2ADsJtYCu1lPSTIEH9HJViM_nHrYNjrvekOSA"
+		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTU3NTI2MTYxMywiZXhwIjoxNTc1MjkwNDEzLCJVc2VySWQiOiJmOTE3YWEwMi1hY2VjLTQwZWQtYmE1Ny0wZGNmZjhkNDFmZTIiLCJzaXRlaWQiOjEsInNjcCI6WyJzaWduYXR1cmUiLCJjbGljay5tYW5hZ2UiLCJvcmdhbml6YXRpb25fcmVhZCIsImdyb3VwX3JlYWQiLCJwZXJtaXNzaW9uX3JlYWQiLCJ1c2VyX3JlYWQiLCJ1c2VyX3dyaXRlIiwiYWNjb3VudF9yZWFkIiwiZG9tYWluX3JlYWQiLCJpZGVudGl0eV9wcm92aWRlcl9yZWFkIiwiZHRyLnJvb21zLnJlYWQiLCJkdHIucm9vbXMud3JpdGUiLCJkdHIuZG9jdW1lbnRzLnJlYWQiLCJkdHIuZG9jdW1lbnRzLndyaXRlIiwiZHRyLnByb2ZpbGUucmVhZCIsImR0ci5wcm9maWxlLndyaXRlIiwiZHRyLmNvbXBhbnkucmVhZCIsImR0ci5jb21wYW55LndyaXRlIl0sImF1ZCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImF6cCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImlzcyI6Imh0dHBzOi8vYWNjb3VudC1kLmRvY3VzaWduLmNvbS8iLCJzdWIiOiJmOTE3YWEwMi1hY2VjLTQwZWQtYmE1Ny0wZGNmZjhkNDFmZTIiLCJhbXIiOlsiaW50ZXJhY3RpdmUiXSwiYXV0aF90aW1lIjoxNTc1MjYxNjEyLCJwd2lkIjoiNjJiM2QxNDgtOTM2My00MWQyLWI0MWUtOGQ5NjVmMjMzYmJiIn0.Kxxx2fv60tURXXJ4gXs-BLA5wdYCPqROWuKzlKw0ueXMJR5uannTcs2pi9FDwUKD-l_izNCfbRc7SCT2oxvwzXIzjolUg46d4EK2vHNudCsY6t5glGYeBURwbfMKH24VWczdqpIYg3PHwxmcij5t4JX0Vz6QKPu-mcnYZcomkutZ4EfjrzKyUheRdQJA5HtCUaD5-4SnAwaeedW5gPDFWhoTk6JI8bAuK1vSFqgpIbqzZT16xU3LzVuSlfhIVqYEwCqeZg0NdWHAIHm-8wDFUCwyewJvzwLAb8SPfpnpUZiUySDoPKl5Qgbsme0LUsjBVje6Qp-u2isVYCbnwfbsNw"
 	};
 	return new Promise(function (resolve, reject){
 		var options = {
@@ -13,20 +13,24 @@ exports.sendEnv = function () {
 			headers: headers,
 	//		body: body,
 	//		json: true,
-			method: 'GET'
+			method: 'GET',
+			rejectUnauthorized: false,
+			timeout: 5000
 		}
 		
 		console.log("Docusign API options....", options);
 		request(options,function(err, response, body){
 			if(err){
+				console.log("Docusign API ERR....", err);
 				const errorResponse = {
-					status : 500,
+					status : 200,
 					data: JSON.stringify(err)
 				}
 				console.log("Docusign API ERROR response....", errorResponse);
-				return reject(errorResponse);
+				return resolve(errorResponse);
 			}
 			else if(response.statusCode === 200 || response.statusCode === 201){
+				console.log("Docusign API actual Response....", response);
 				const Response = {
 					status : 200,
 					data: JSON.stringify(body)
@@ -36,12 +40,13 @@ exports.sendEnv = function () {
 				
 			}
 			else {
+				console.log("Docusign API actual ERROR Response....", response);
 				const errorResponse1 = {
-					status : 500,
+					status : 200,
 					data: JSON.stringify(response)
 				}
 				console.log("Docusign API response....", errorResponse1);
-				return reject(errorResponse1);
+				return resolve(errorResponse1);
 			}
 		})
 		
