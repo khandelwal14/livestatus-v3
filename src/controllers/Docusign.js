@@ -11,10 +11,10 @@ module.exports.sendEnvelope = function sendEnvelope (req, res, next) {
 };
 
 
-module.exports.sendEnv = function sendEnv (req, res, next) {
+module.exports.sendEnv = async function sendEnv (req, res, next) {
 	
 	console.log("Inside docusign sendEnv function - controller file");
-	  var serviceRes = DocusignEnv.sendEnv();
+	  var serviceRes = await DocusignEnv.sendEnv();
 	  console.log("returning sendEnv response - controller file", serviceRes);
 	  return serviceRes;
 };
