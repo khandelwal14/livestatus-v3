@@ -1,5 +1,6 @@
 'use strict';
 
+const DocusignEnv = require('../service/docusignAPICall');
 
 module.exports.sendEnvelope = function sendEnvelope (req, res, next) {
 	var Docusign = require('../service/docusignService');
@@ -11,7 +12,7 @@ module.exports.sendEnvelope = function sendEnvelope (req, res, next) {
 
 
 module.exports.sendEnv = function sendEnv (req, res, next) {
-	var DocusignEnv = require('../service/docusignAPICall');
+	
 	console.log("Inside docusign function");
 	  var serviceRes = DocusignEnv.sendEnv();
 	  //var serviceRes = {"Docusign":true,"liveAsOf":"2019-12-01T20:52:34Z"};
@@ -21,6 +22,3 @@ module.exports.sendEnv = function sendEnv (req, res, next) {
 		  return err;
 	  })
 };
-
-
-//console.log("calling sendEnv...", sendEnv())

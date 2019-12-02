@@ -1,6 +1,6 @@
 const request = require('request');
 
-module.exports.sendEnv= function sendEnv () {
+exports.sendEnv = function () {
 //	var Docusign = require('../service/docusignService');
 	console.log("Inside docusign sendEnv function");
 	
@@ -47,5 +47,3 @@ module.exports.sendEnv= function sendEnv () {
 		
 	}) 
 };
-
-//console.log ("calling actual Docusign....", sendEnv())
