@@ -15,7 +15,7 @@ exports.sendEnv = function () {
 	//		json: true,
 			method: 'GET',
 			rejectUnauthorized: false,
-			timeout: 5000
+			timeout: 15000
 		}
 		
 		console.log("Docusign API options....", options);
