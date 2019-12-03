@@ -32,6 +32,7 @@ api.get('/testUpdate', function () {
 
 
 api.get('/sendEnv', function () {
+	'use strict';
 	
 	//var Docusign = require('./controllers/Docusign');
 	var DocusignEnv = require('./service/docusignAPICall');
@@ -41,19 +42,17 @@ api.get('/sendEnv', function () {
 	
 	var finalResponse = DocusignEnv.sendEnv();
 	  //var serviceRes = {"Docusign":true,"liveAsOf":"2019-12-01T20:52:34Z"};
-	  finalResponse.then(function(res){
+	 return finalResponse.then(function(res){
 		  console.log("response in app")
 		  console.log("response in app.1",res)
 		  console.log("response in app.1.1",res.data)
-		  //return JSON.parse(res.data);
+		  //return res;
 		  return 'success from Docusign hardcoded in app';
 	  }).catch(function(err){
 		  console.log("error in app")
 		  console.log("error in app.1",err)
 		  return err;
 	  })
-	
-	//console.log("final response in app");
-	//console.log("final response in app.1",finalResponse);
-    //return finalResponse;
+
 });
+
