@@ -11,10 +11,14 @@ module.exports.sendEnvelope = function sendEnvelope (req, res, next) {
 };
 
 
-module.exports.sendEnv = async function sendEnv (req, res, next) {
+module.exports.sendEnv = function sendEnv (req, res, next) {
 	
-	console.log("Inside docusign sendEnv function - controller file");
-	  var serviceRes = await DocusignEnv.sendEnv();
-	  console.log("returning sendEnv response - controller file", serviceRes);
-	  return serviceRes;
+	console.log("Inside docusign function");
+	  var serviceRes = DocusignEnv.sendEnv();
+	  //var serviceRes = {"Docusign":true,"liveAsOf":"2019-12-01T20:52:34Z"};
+	  serviceRes.then(function(res){
+		  return res;
+	  }).catch(function(err){
+		  return err;
+	  })
 };
