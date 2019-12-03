@@ -36,6 +36,8 @@ api.get('/sendEnv', function () {
 	var Docusign = require('./controllers/Docusign');
 	
 	var finalResponse = Docusign.sendEnv()
+	    console.log("final response in app");
+	console.log("final response in app.1",finalResponse);
 
   return finalResponse;
 });
