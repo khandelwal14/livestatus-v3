@@ -25,27 +25,27 @@ exports.sendEnv = function () {
 			console.log("Docusign API Response ....body ", body);
 			if(err){
 				const errorResponse = {
-					status : 200,
-					data: err
+					status : 500//,
+					//data: err.code
 				}
-				console.log("Docusign API Response ....err.1", errorResponse);
+				console.log("Docusign API Response ....err.1", err);
 				resolve(errorResponse);
 			}
 			else if(response.statusCode === 200 || response.statusCode === 201){
 				const responseSuccess = {
-					status : 200,
-					data: body
+					status : 200//,
+					//data: body
 				}
-					console.log("Docusign API Response ....response.1", responseSuccess);
+					console.log("Docusign API Response ....response.1", response);
 				resolve(responseSuccess);
 				
 			}
 			else {
 				const errorResponse1 = {
-					status : 200,
-					data: body
+					status : 503//,
+					//data: body
 				}
-				console.log("Docusign API Response ....body.1", errorResponse1);
+				console.log("Docusign API Response ....body.1", body);
 				resolve(errorResponse1);
 			}
 		})
