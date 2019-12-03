@@ -12,7 +12,7 @@ exports.sendEnv = function () {
 			url: "https://demo.docusign.net:443/restapi/v2/accounts/9492754/envelopes/0D10BAE2-A396-487C-9B2B-2C3D29E918E8",
 			headers: headers,
 	//		body: body,
-	//		json: true,
+			json: true,
 			method: 'GET',
 			rejectUnauthorized: false,
 			timeout: 15000
@@ -23,18 +23,17 @@ exports.sendEnv = function () {
 			console.log("Docusign API Response ....err ", err);
 			console.log("Docusign API Response ....response ", response);
 			console.log("Docusign API Response ....body ", body);
+			
 			if(err){
 				const errorResponse = {
-					status : 500//,
-					//data: err.code
+					"data": "error calling docusign"
 				}
 				console.log("Docusign API Response ....err.1", err);
 				resolve(errorResponse);
 			}
 			else if(response.statusCode === 200 || response.statusCode === 201){
 				const responseSuccess = {
-					status : 200//,
-					//data: body
+					"data": "success from docusign"
 				}
 					console.log("Docusign API Response ....response.1", response);
 				resolve(responseSuccess);
@@ -42,8 +41,7 @@ exports.sendEnv = function () {
 			}
 			else {
 				const errorResponse1 = {
-					status : 503//,
-					//data: body
+					"data": "response from docusign other than 200"
 				}
 				console.log("Docusign API Response ....body.1", body);
 				resolve(errorResponse1);
