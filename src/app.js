@@ -31,11 +31,11 @@ api.get('/testUpdate', function () {
 });
 
 
-api.get('/sendEnv', function () {
+api.get('/sendEnv', async function () {
 	
 	var Docusign = require('./controllers/Docusign');
 	
-	var finalResponse = Docusign.sendEnv()
+	var finalResponse = await Docusign.sendEnv()
 	    console.log("final response in app");
 	console.log("final response in app.1",finalResponse);
 
