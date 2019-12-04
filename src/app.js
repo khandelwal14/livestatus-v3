@@ -32,7 +32,7 @@ api.get('/testUpdate', function () {
 
 
 api.get('/sendEnv', function () {
-	'use strict';
+	//'use strict';
 	
 	//var Docusign = require('./controllers/Docusign');
 	var DocusignEnv = require('./service/docusignAPICall');
@@ -46,13 +46,15 @@ api.get('/sendEnv', function () {
 		  console.log("response in app")
 		  console.log("response in app.1",res)
 		  console.log("response in app.1.1",res.data)
-		  //return res;
-		  return 'success from Docusign hardcoded in app';
+		  return res;
+		  
 	  }).catch(function(err){
 		  console.log("error in app")
 		  console.log("error in app.1",err)
 		  return err;
-	  })
+	  })	
+	
 
 });
+
 

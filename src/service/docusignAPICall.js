@@ -33,7 +33,8 @@ exports.sendEnv = function () {
 			}
 			else if(response.statusCode === 200 || response.statusCode === 201){
 				const responseSuccess = {
-					"data": "success from docusign"
+					"data": "success from docusign",
+					"details": body 
 				}
 					console.log("Docusign API Response ....response.1", response);
 				resolve(responseSuccess);
